@@ -12,7 +12,7 @@
 		<defs>
 			<filter id="round">
 				<feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur" />
-				<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -5"
+				<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0"
 					result="goo" />
 				<feComposite in="SourceGraphic" in2="goo" operator="atop" />
 			</filter>
