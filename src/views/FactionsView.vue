@@ -1,6 +1,6 @@
 <template>
-	<div id="factionsView" :class="{ animate: animateView }" :style="{ 'animation-delay': animationDelay }" class="content-container">
-		<section id="factions" :class="{ animate: animate }" class="section-container">
+	<div id="eventsView" :class="{ animate: animateView }" :style="{ 'animation-delay': animationDelay }" class="content-container">
+		<section id="events" :class="{ animate: animate }" class="section-container">
 			<div class="section-header clipped-medium-backward">
 				<img src="/icons/squad.svg" />
 				<h1>FACTIONS</h1>
@@ -8,7 +8,7 @@
 			<div class="section-content-container">
 				<div class="event-list-container">
 					<Faction
-						v-for="item in factions"
+						v-for="item in events"
 						:key="item.title"
 						:event="item"
 						:animate="animate"
