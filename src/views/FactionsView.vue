@@ -2,7 +2,7 @@
 	<div id="eventsView" :class="{ animate: animateView }" :style="{ 'animation-delay': animationDelay }" class="content-container">
 		<section id="events" :class="{ animate: animate }" class="section-container">
 			<div class="section-header clipped-medium-backward">
-				<img src="/icons/clockwork.svg" />
+				<img src="/icons/npc.svg" />
 				<h1>FACTIONS</h1>
 			</div>
 			<div class="section-content-container">
