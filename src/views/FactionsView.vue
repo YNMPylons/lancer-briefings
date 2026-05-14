@@ -1,5 +1,5 @@
 <template>
-	<div id="FactionsView" :class="{ animate: animateView }" :style="{ 'animation-delay': animationDelay }" class="content-container">
+	<div id="factionsView" :class="{ animate: animateView }" :style="{ 'animation-delay': animationDelay }" class="content-container">
 		<section id="factions" :class="{ animate: animate }" class="section-container">
 			<div class="section-header clipped-medium-backward">
 				<img src="/icons/npc.svg" />
@@ -20,12 +20,12 @@
 			<div style="height: 52px; overflow: hidden">
 				<div class="section-header clipped-medium-backward-events-logs">
 					<img src="/icons/conversation.svg" />
-					<h1>FACTION OVERVIEW</h1>
+					<h1>INFORMATION OVERVIEW/h1>
 				</div>
 				<div class="rhombus-back">&nbsp;</div>
 			</div>
 			<div class="section-content-container extra-margins">
-				<div class="faction" v-if="selectedFaction.title">
+				<div class="event" v-if="selectedFaction.title">
 					<div class="name">
 						<h1>{{ selectedFaction.location }} // {{ selectedFaction.time }}</h1>
 						<h2>{{ selectedFaction.title }}</h2>
@@ -51,7 +51,7 @@ export default {
 			type: Boolean,
 			required: true,
 		},
-		factions: {
+		events: {
 			type: Array,
 			required: true,
 		},
