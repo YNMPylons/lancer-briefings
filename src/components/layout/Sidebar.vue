@@ -20,6 +20,7 @@
 				<router-link class="clipped-bottom-right" to="/events">
 					<img src="/icons/events.svg" />
 					<span>Logs</span>
+				</router-link>
 				<router-link class="clipped-bottom-right" to="/factions">
 					<img src="/icons/squad.svg" />
 					<span>Factions</span>
