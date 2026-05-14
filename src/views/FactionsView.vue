@@ -10,13 +10,13 @@
 					<Event
 						v-for="item in factions"
 						:key="item.title"
-						:event="item"
+						:faction="item"
 						:animate="animate"
-						@select-event="selectFaction(item)" />
+						@select-faction="selectFaction(item)" />
 				</div>
 			</div>
 		</section>
-		<section id="events-logs" :class="{ animate: animate }" class="section-container">
+		<section id="faction-overview" :class="{ animate: animate }" class="section-container">
 			<div style="height: 52px; overflow: hidden">
 				<div class="section-header clipped-medium-backward-events-logs">
 					<img src="/icons/conversation.svg" />
@@ -25,7 +25,7 @@
 				<div class="rhombus-back">&nbsp;</div>
 			</div>
 			<div class="section-content-container extra-margins">
-				<div class="event" v-if="selectedFaction.title">
+				<div class="faction" v-if="selectedFaction.title">
 					<div class="name">
 						<h1>{{ selectedFaction.location }} // {{ selectedFaction.time }}</h1>
 						<h2>{{ selectedFaction.title }}</h2>
@@ -51,7 +51,7 @@ export default {
 			type: Boolean,
 			required: true,
 		},
-		events: {
+		factions: {
 			type: Array,
 			required: true,
 		},
