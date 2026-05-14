@@ -139,7 +139,13 @@ import ktbData from 'lancer-ktb-data'
 import nrfawData from 'lancer-nrfaw-data'
 import longrimData from 'lancer-longrim-data'
 
-import wallflowerData from '@/assets/LCPs/wallflower-data-2.0.5'
+import dustgraveData from '@/assets/LCPs/dustgrave-data-1.4.0'
+import ktbmainData from '@/assets/LCPs/ktb-main-data-1.2.3'
+import longrimmainData from '@/assets/LCPs/longrim-main-data-1.2.1'
+import shadowData from '@/assets/LCPs/shadow-data-1.0.2'
+import sirenData from '@/assets/LCPs/siren-data-1.7.0'
+import solsticeData from '@/assets/LCPs/solstice-data-1.2.0'
+import wallflowerData from '@/assets/LCPs/wallflower-data-2.1.0'
 /*Append the datasets within computed if your LCP has new items.
 EX:
 pilotGear() {
