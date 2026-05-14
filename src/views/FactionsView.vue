@@ -6,7 +6,7 @@
 				<h1>FACTIONS</h1>
 			</div>
 			<div class="section-content-container">
-				<div class="faction-list-container">
+				<div class="event-list-container">
 					<Faction
 						v-for="item in factions"
 						:key="item.title"
