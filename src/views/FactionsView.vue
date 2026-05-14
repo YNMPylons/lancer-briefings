@@ -20,7 +20,7 @@
 			<div style="height: 52px; overflow: hidden">
 				<div class="section-header clipped-medium-backward-events-logs">
 					<img src="/icons/conversation.svg" />
-					<h1>INFORMATION OVERVIEW/h1>
+					<h1>OVERVIEW</h1>
 				</div>
 				<div class="rhombus-back">&nbsp;</div>
 			</div>
