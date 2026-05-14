@@ -1,14 +1,14 @@
 <template>
-	<div id="eventsView" :class="{ animate: animateView }" :style="{ 'animation-delay': animationDelay }" class="content-container">
-		<section id="events" :class="{ animate: animate }" class="section-container">
+	<div id="factionsView" :class="{ animate: animateView }" :style="{ 'animation-delay': animationDelay }" class="content-container">
+		<section id="factions" :class="{ animate: animate }" class="section-container">
 			<div class="section-header clipped-medium-backward">
 				<img src="/icons/squad.svg" />
 				<h1>FACTIONS</h1>
 			</div>
 			<div class="section-content-container">
-				<div class="events-list-container">
-					<Event
-						v-for="item in events"
+				<div class="faction-list-container">
+					<Faction
+						v-for="item in factions"
 						:key="item.title"
 						:event="item"
 						:animate="animate"
