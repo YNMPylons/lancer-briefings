@@ -32,6 +32,13 @@ const routes = [
 		props: true,
 		meta: { title: `${DEFAULT_TITLE} EVENTS LOG` },
 	},
+	{
+		path: "/factions",
+		name: "Factions",
+		component: Factions,
+		props: true,
+		meta: { title: `${DEFAULT_TITLE} FACTION OVERVIEW` },
+	},
 ];
 
 const router = createRouter({
