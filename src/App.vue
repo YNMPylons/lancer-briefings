@@ -5,7 +5,7 @@
 	</div>
 	<div id="router-view-container">
 		<router-view :animate="animate" :initial-slug="initialSlug" :missions="missions" :events="events"
-			:pilots="pilots" :clocks="clocks" :reserves="reserves" />
+			:pilots="pilots" :clocks="clocks" :reserves="reserves" :factions="factions" />
 	</div>
 	<svg style="visibility: hidden; position: absolute" width="0" height="0" xmlns="http://www.w3.org/2000/svg"
 		version="1.1">
@@ -47,6 +47,7 @@ export default {
 			pilots: [],
 			reserves: [],
 			bonds: [],
+			factions: [],
 		};
 	},
 	created() {
@@ -56,6 +57,7 @@ export default {
 		this.importClocks(import.meta.glob("@/assets/clocks/*.json"));
 		this.importReserves(import.meta.glob("@/assets/reserves/*.json"));
 		this.importPilots(import.meta.glob("@/assets/pilots/*.json"));
+		this.importEvents(import.meta.glob("@/assets/events/*.json"));
 	},
 	mounted() {
 		this.$router.push("/status");
@@ -150,6 +152,20 @@ export default {
 					this.reserves = [...this.reserves, reserve];
 				});
 			});
+		},
+		async importFactions(files) {
+			let filePromises = Object.keys(files).map(path => files[path]());
+			let fileContents = await Promise.all(filePromises);
+			fileContents.forEach(content => {
+				let faction = {};
+				faction["title"] = content.split("\n")[0];
+				faction["location"] = content.split("\n")[1];
+				faction["time"] = content.split("\n")[2];
+				faction["thumbnail"] = content.split("\n")[3];
+				faction["content"] = content.split("\n").splice(4).join("\n");
+				this.factions = [...this.factions, faction];
+			});
+			this.factions = this.factions.reverse();
 		},
 	},
 };
