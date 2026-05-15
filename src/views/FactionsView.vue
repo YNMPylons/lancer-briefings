@@ -1,18 +1,18 @@
 <template>
 	<div id="factionsView" :class="{ animate: animateView }" :style="{ 'animation-delay': animationDelay }" class="content-container">
-		<section id="events" :class="{ animate: animate }" class="section-container">
+		<section id="factions" :class="{ animate: animate }" class="section-container">
 			<div class="section-header clipped-medium-backward">
 				<img src="/icons/squad.svg" />
 				<h1>FACTIONS</h1>
 			</div>
 			<div class="section-content-container">
-				<div class="events-list-container">
+				<div class="factions-list-container">
 					<Event
-						v-for="item in events"
+						v-for="item in factions"
 						:key="item.title"
-						:event="item"
+						:faction="item"
 						:animate="animate"
-						@select-event="selectEvent(item)" />
+						@select-faction="selectFaction(item)" />
 				</div>
 			</div>
 		</section>
@@ -39,12 +39,12 @@
 
 <script>
 import { VueMarkdownIt } from '@f3ve/vue-markdown-it';
-import Event from "@/components/Event.vue";
+import Faction from "@/components/Faction.vue";
 
 export default {
 	components: {
 		VueMarkdownIt,
-		Event,
+		Faction,
 	},
 	props: {
 		animate: {
@@ -58,14 +58,14 @@ export default {
 	},
 	data() {
 		return {
-			selectedEvent:{
+			selectedFaction:{
 				type: Object,
 			}
 		};
 	},
 	methods: {
-		selectEvent(event) {
-			this.selectedEvent = event;
+		selectFaction(faction) {
+			this.selectedFaction = faction;
 		}
 	}
 };
