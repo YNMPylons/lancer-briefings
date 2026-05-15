@@ -1,26 +1,26 @@
 <template>
-	<div id="factionsView" :class="{ animate: animateView }" :style="{ 'animation-delay': animationDelay }" class="content-container">
-		<section id="factions" :class="{ animate: animate }" class="section-container">
+	<div id="eventsView" :class="{ animate: animateView }" :style="{ 'animation-delay': animationDelay }" class="content-container">
+		<section id="events" :class="{ animate: animate }" class="section-container">
 			<div class="section-header clipped-medium-backward">
-				<img src="/icons/squad.svg" />
-				<h1>FACTIONS</h1>
+				<img src="/icons/clockwork.svg" />
+				<h1>BEATS</h1>
 			</div>
 			<div class="section-content-container">
-				<div class="factions-list-container">
+				<div class="events-list-container">
 					<Event
-						v-for="item in factions"
+						v-for="item in events"
 						:key="item.title"
-						:faction="item"
+						:event="item"
 						:animate="animate"
-						@select-faction="selectFaction(item)" />
+						@select-event="selectEvent(item)" />
 				</div>
 			</div>
 		</section>
-		<section id="overview" :class="{ animate: animate }" class="section-container">
+		<section id="events-logs" :class="{ animate: animate }" class="section-container">
 			<div style="height: 52px; overflow: hidden">
 				<div class="section-header clipped-medium-backward-events-logs">
 					<img src="/icons/conversation.svg" />
-					<h1>OVERVIEW</h1>
+					<h1>EVENT LOG</h1>
 				</div>
 				<div class="rhombus-back">&nbsp;</div>
 			</div>
@@ -39,12 +39,12 @@
 
 <script>
 import { VueMarkdownIt } from '@f3ve/vue-markdown-it';
-import Faction from "@/components/Faction.vue";
+import Event from "@/components/Event.vue";
 
 export default {
 	components: {
 		VueMarkdownIt,
-		Faction,
+		Event,
 	},
 	props: {
 		animate: {
@@ -58,14 +58,14 @@ export default {
 	},
 	data() {
 		return {
-			selectedFaction:{
+			selectedEvent:{
 				type: Object,
 			}
 		};
 	},
 	methods: {
-		selectFaction(faction) {
-			this.selectedFaction = faction;
+		selectEvent(event) {
+			this.selectedEvent = event;
 		}
 	}
 };
