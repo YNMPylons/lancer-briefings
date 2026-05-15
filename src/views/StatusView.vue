@@ -15,7 +15,7 @@
 		</section>
 		<section id="assignment" class="section-container" :style="{ 'animation-delay': animationDelay }">
 			<div class="section-header clipped-medium-backward">
-				<img src="/icons/deployable.svg" />
+				<img src="/icons/conversation.svg" />
 				<h1>Current Assignment</h1>
 			</div>
 			<div class="section-content-container">
