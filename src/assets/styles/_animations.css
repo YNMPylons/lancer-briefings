@@ -181,5 +181,12 @@ section.section-container[class*="animate"]#events-logs {
 	animation: slideInFromTopFade 0.5s ease-in-out;
 	animation-fill-mode: both;
 }
+section.section-container[class*="animate"]#factions,
+section.section-container[class*="animate"]#overview {
+	position:relative;
+	z-index:0;
+	animation: slideInFromTopFade 0.5s ease-in-out;
+	animation-fill-mode: both;
+}
 
 /* END VIEWS CONTENT */
